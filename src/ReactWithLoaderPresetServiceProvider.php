@@ -12,7 +12,7 @@ class ReactWithLoaderPresetServiceProvider extends ServiceProvider
         PresetCommand::macro('react-with-loader', function ($command) {
             ReactWithLoaderPreset::install();
             $command->info('React with loader preset installed successfully.');
-            $command->info('Please run "npm install && npm run dev" to install all required dependencies and run "npm run watch" to start developing.');
+            $command->info('Please run "npm install" to install all required dependencies and run "npm run watch" to start developing.');
         });
     }
 }
