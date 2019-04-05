@@ -1,6 +1,7 @@
 <?php
 namespace AbdelhakLallouche\ReactWithLoaderPreset;
 
+use Artisan;
 use Illuminate\Support\Arr;
 use Illuminate\Container\Container;
 use Illuminate\Filesystem\Filesystem;
@@ -10,11 +11,19 @@ class ReactWithLoaderPreset extends Preset
 {
     public static function install()
     {
+        static::removeAllPresets();
         static::updatePackages();
         static::updateBootstrapping();
         static::updateWelcomePage();
         static::removeNodeModules();
         static::addControllers();
+    }
+
+    protected static function removeAllPresets()
+    {
+        Artisan::call('preset',[
+            'type' => 'none'
+        ]);
     }
 
     protected static function updatePackageArray(array $packages)
