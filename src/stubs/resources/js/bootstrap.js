@@ -41,7 +41,7 @@ if (token) {
 /**
  * Laravel frontend preset for react with auto lazy loader
  */
-const Loader = require('./laravel-react-loader');
+import Loader from'./laravel-react-loader';
 Loader();
 
 /**
