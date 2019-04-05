@@ -1,0 +1,21 @@
+{
+  "name": "abdlhaklalouche/react-loader",
+  "description": "Laravel frontend preset for react with auto lazy loader",
+  "keywords": ["laravel", "preset", "react-loader"],
+  "license": "MIT",
+  "require": {
+    "laravel/framework": "^5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "AbdelhakLallouche\\ReactWithLoaderPreset\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AbdelhakLallouche\\ReactWithLoader\\ReactWithLoaderPresetServiceProvider"
+      ]
+    }
+  }
+}
