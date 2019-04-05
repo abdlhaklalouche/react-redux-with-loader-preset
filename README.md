@@ -14,7 +14,7 @@ A laravel preset for using react quickly with autoloading components.
 ### Initializing the preset
 
 1. `php artisan preset react-with-loader`
-2. `npm install && npm run dev`
+2. `npm install`
 2. `npm run watch` or `npm run dev` or `npm run prod`
 3. `php artisan serve` to run the server.
 
