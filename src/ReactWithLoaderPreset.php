@@ -53,6 +53,7 @@ class ReactWithLoaderPreset extends Preset
         copy(__DIR__.'/stubs/.babelrc', base_path('.babelrc'));
         copy(__DIR__.'/stubs/resources/js/bootstrap.js', resource_path('js/bootstrap.js'));
         copy(__DIR__.'/stubs/resources/js/laravel-react-loader.js', resource_path('js/laravel-react-loader.js'));
+        (new Filesystem)->makeDirectory(resource_path('js/components'), 0775, true);
         copy(__DIR__.'/stubs/resources/js/components/Welcome.js', resource_path('js/components/Welcome.js'));
     }
 
