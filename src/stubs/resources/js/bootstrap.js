@@ -39,9 +39,9 @@ if (token) {
 
 
 /**
- * Laravel frontend preset for react with auto lazy loader
+ * Laravel frontend preset for react and redux with auto lazy loader
  */
-import Loader from'./laravel-react-loader';
+import Loader from './laravel-react-loader';
 Loader();
 
 /**

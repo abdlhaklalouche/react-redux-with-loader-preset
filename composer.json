@@ -1,7 +1,7 @@
 {
-  "name": "abdlhaklalouche/react-with-loader-preset",
-  "description": "Laravel frontend preset for react with auto lazy loader",
-  "keywords": ["laravel", "preset", "react-loader"],
+  "name": "abdlhaklalouche/react-redux-with-loader-preset",
+  "description": "Laravel frontend preset for react and redux with auto lazy loader",
+  "keywords": ["laravel", "preset", "react-loader", "react-redux"],
   "license": "MIT",
   "authors": [
     {
@@ -14,14 +14,14 @@
   },
   "autoload": {
     "psr-4": {
-      "AbdelhakLallouche\\ReactWithLoaderPreset\\": "src/"
+      "AbdelhakLallouche\\ReactReduxWithLoaderPreset\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "AbdelhakLallouche\\ReactWithLoaderPreset\\ReactWithLoaderPresetServiceProvider",
-        "AbdelhakLallouche\\ReactWithLoaderPreset\\stubs\\providers\\ReactWithLoaderPresetServiceProvider"
+        "AbdelhakLallouche\\ReactReduxWithLoaderPreset\\ReactReduxWithLoaderPresetServiceProvider",
+        "AbdelhakLallouche\\ReactReduxWithLoaderPreset\\stubs\\providers\\ReactReduxWithLoaderPresetServiceProvider"
       ]
     }
   }

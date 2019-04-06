@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel with react loader</title>
+    <title>Laravel with react and redux loader</title>
     <style>
         * {
             margin: 0;
@@ -29,7 +29,7 @@
         "loading": true,
         "class": "welcome",
         "props": {
-            "name": "Laravel react loader"
+            "name": "Laravel react with redux loader"
         }
     })
 

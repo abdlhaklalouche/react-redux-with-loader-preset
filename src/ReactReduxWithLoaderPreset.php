@@ -1,5 +1,5 @@
 <?php
-namespace AbdelhakLallouche\ReactWithLoaderPreset;
+namespace AbdelhakLallouche\ReactReduxWithLoaderPreset;
 
 use Artisan;
 use Illuminate\Support\Arr;
@@ -7,7 +7,7 @@ use Illuminate\Container\Container;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Console\Presets\Preset;
 
-class ReactWithLoaderPreset extends Preset
+class ReactReduxWithLoaderPreset extends Preset
 {
     public static function install()
     {
@@ -38,6 +38,9 @@ class ReactWithLoaderPreset extends Preset
             "react" => "^16.7.0",
             "react-dom" => "^16.7.0",
             "resolve-url-loader" => "^2.3.1",
+            "redux" => "^4.0.1",
+            "react-redux" => "^6.0.0",
+            "redux-promise-middleware" => "^5.1.1",
         ], Arr::except($packages, [
             'bootstrap',
             'bootstrap-sass',
@@ -53,8 +56,13 @@ class ReactWithLoaderPreset extends Preset
         copy(__DIR__.'/stubs/.babelrc', base_path('.babelrc'));
         copy(__DIR__.'/stubs/resources/js/bootstrap.js', resource_path('js/bootstrap.js'));
         copy(__DIR__.'/stubs/resources/js/laravel-react-loader.js', resource_path('js/laravel-react-loader.js'));
+        copy(__DIR__.'/stubs/resources/js/store.js', resource_path('js/store.js'));
         (new Filesystem)->makeDirectory(resource_path('js/components'), 0775, true);
+        (new Filesystem)->makeDirectory(resource_path('js/containers'), 0775, true);
+        (new Filesystem)->makeDirectory(resource_path('js/actions'), 0775, true);
+        (new Filesystem)->makeDirectory(resource_path('js/reducers'), 0775, true);
         copy(__DIR__.'/stubs/resources/js/components/Welcome.js', resource_path('js/components/Welcome.js'));
+        copy(__DIR__.'/stubs/resources/js/reducers/default.js', resource_path('js/reducers/default.js'));
     }
 
     protected static function updateWelcomePage()

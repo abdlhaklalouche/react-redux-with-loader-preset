@@ -1,11 +1,11 @@
 <?php
 
-namespace AbdelhakLallouche\ReactWithLoaderPreset\stubs\providers;
+namespace AbdelhakLallouche\ReactReduxWithLoaderPreset\stubs\providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
-class ReactWithLoaderPresetServiceProvider extends ServiceProvider
+class ReactReduxWithLoaderPresetServiceProvider extends ServiceProvider
 {
     public function boot()
     {
